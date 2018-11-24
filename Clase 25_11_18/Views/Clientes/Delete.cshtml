@@ -1,0 +1,56 @@
+﻿@model Clase_25_11_18.Models.Intity.Clientes
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Clientes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VNombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VNombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VDireccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VDireccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VRUC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VRUC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VTelefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VTelefono)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
